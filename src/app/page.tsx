@@ -1,8 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import StackButton from '@/components/stacked-button';
 import StackContainer from '@/components/stacked-container';
-import Image from 'next/image';
 
 export default function Home() {
 	return (
@@ -11,32 +11,34 @@ export default function Home() {
 			<div className="relative w-screen h-[90vh]">
 				<div className="absolute inset-0 bg-black opacity-80 z-10"></div>
 				<div className="absolute inset-0 flex justify-center items-center blur-lg z-0">
-					<Image
+					<img
 						alt="background"
-						src={'/assets/background_image.png'}
-						layout="responsive"
-						quality={100}
-						width={9}
-						height={16}
+						src="/assets/background_image.png"
+						style={{ width: '100%', height: 'auto' }}
 					/>
 				</div>
 				<div className="relative z-20 p-8">
-					<Image alt="icon" src="/assets/Icon.png" width={60} height={60} />
+					<img alt="icon" src="/assets/Icon.png" width="60" height="60" />
 					<div className="flex flex-col items-start justify-center h-[80vh]">
 						<div className="font-pixel text-4xl pb-4">Dungeon</div>
 						<div className="pb-6">
 							Find the best gaming arenas around you from our hand-picked places
 							for the best esports experience.
 						</div>
-						<StackButton content="Get started" bgColor="bg-purple-500" textColor='text-white' width='w-40'/>
+						<StackButton
+							content="Get started"
+							bgColor="bg-purple-500"
+							textColor="text-white"
+							width="w-40"
+						/>
 					</div>
 				</div>
 				<div className="absolute bottom-[-5vh] right-[-7vw] z-30">
-					<Image
+					<img
 						alt="dragon icon"
 						src="/assets/dragon.png"
-						width={200}
-						height={200}
+						width="200"
+						height="200"
 					/>
 				</div>
 			</div>
@@ -45,13 +47,8 @@ export default function Home() {
 			<div className="h-[70vh] w-screen z-20 flex items-center justify-center">
 				<StackContainer width="w-[90vw]" height="h-auto">
 					<div className="relative flex flex-col justify-center items-start w-[100vw] py-5 h-">
-						<Image
-							alt="icon"
-							src="/assets/rocket.png"
-							width={160}
-							height={160}
-							quality={100}
-						/>
+						<img alt="icon" src="/assets/rocket.png" width="160" height="160" />
+
 						<div className="font-pixel text-2xl pb-2">For Players</div>
 						<div className="pb-3">
 							Find about latest games and get to experience them in the nearest
@@ -74,7 +71,12 @@ export default function Home() {
 							<div className="ps-2">Colab and compete</div>
 						</div>
 						<div className="pt-4"></div>
-						<StackButton content="Book Now" bgColor="bg-green-400" textColor="text-black" width='w-40'/>
+						<StackButton
+							content="Book Now"
+							bgColor="bg-green-400"
+							textColor="text-black"
+							width="w-40"
+						/>
 					</div>
 				</StackContainer>
 			</div>
@@ -82,13 +84,8 @@ export default function Home() {
 			{/* Section Three */}
 			<div className="h-[70vh] w-[100vw]">
 				<div className="relative flex flex-col justify-center items-start w-[100vw] p-5 h-">
-					<Image
-						alt="icon"
-						src="/assets/house.png"
-						width={160}
-						height={160}
-						quality={100}
-					/>
+					<img alt="icon" src="/assets/house.png" width="160" height="160" />
+
 					<div className="font-pixel text-2xl pb-2">For Arenas</div>
 					<div className="pb-3">
 						Become top rated hang-out place for gaming enthusiast and take your
@@ -111,7 +108,12 @@ export default function Home() {
 						<div className="ps-2">Transparent payments</div>
 					</div>
 					<div className="pt-4"></div>
-						<StackButton content="Register Now!" bgColor="bg-orange-400" textColor="text-black" width='w-48'/>
+					<StackButton
+						content="Register Now!"
+						bgColor="bg-orange-400"
+						textColor="text-black"
+						width="w-48"
+					/>
 				</div>
 			</div>
 
@@ -119,21 +121,31 @@ export default function Home() {
 			<div className="h-[70vh] w-screen z-20 flex items-start justify-center">
 				<StackContainer width="w-[90vw]" height="h-auto">
 					<div className="relative flex flex-col justify-center items-start w-[100vw] py-5 h-">
-						<Image
+						<img
 							alt="icon"
 							src="/assets/panda.png"
-							width={160}
-							height={160}
-							quality={100}
+							width="160"
+							height="160"
 							style={{ transform: 'scaleX(-1)' }}
 						/>
+
 						<div className="font-pixel text-2xl pb-2">Connect with us</div>
 						<div className="pb-3">
-							Let&apos;s connect and grow the gaming community together. Fill in the details and we will get in touch with you.
+							Let&apos;s connect and grow the gaming community together. Fill in
+							the details and we will get in touch with you.
 						</div>
-						<input type="text" className='bg-black border-2 placeholder-zinc-500 p-2 w-[80vw]' placeholder='Phone or Email'/>
+						<input
+							type="text"
+							className="bg-black border-2 placeholder-zinc-500 p-2 w-[80vw]"
+							placeholder="Phone or Email"
+						/>
 						<div className="pt-4"></div>
-						<StackButton content="Connect with us" bgColor="bg-red-400" textColor="text-black" width='w-48'/>
+						<StackButton
+							content="Connect with us"
+							bgColor="bg-red-400"
+							textColor="text-black"
+							width="w-48"
+						/>
 					</div>
 				</StackContainer>
 			</div>
