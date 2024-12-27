@@ -44,9 +44,9 @@ export default function Home() {
 			</div>
 
 			{/* Section Two */}
-			<div className="h-[70vh] w-screen z-20 flex items-center justify-center">
+			<div className="h-[90vh] w-screen z-20 flex items-center justify-center py-8">
 				<StackContainer width="w-[90vw]" height="h-auto">
-					<div className="relative flex flex-col justify-center items-start w-[100vw] py-5 h-">
+					<div className="relative flex flex-col justify-center items-start w-[100vw] py-5">
 						<img alt="icon" src="/assets/rocket.png" width="160" height="160" />
 
 						<div className="font-pixel text-2xl pb-2">For Players</div>
@@ -82,7 +82,7 @@ export default function Home() {
 			</div>
 
 			{/* Section Three */}
-			<div className="h-[70vh] w-[100vw]">
+			<div className="h-[80vh] w-[100vw]">
 				<div className="relative flex flex-col justify-center items-start w-[100vw] p-5 h-">
 					<img alt="icon" src="/assets/house.png" width="160" height="160" />
 
