@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "dungeon-4a60f"
-  }
+  },
+  "targets": {
+    "dungeon-4a60f": {
+      "hosting": {
+        "landing": [
+          "dungeon-4a60f"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
