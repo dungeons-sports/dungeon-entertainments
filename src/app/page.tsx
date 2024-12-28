@@ -5,6 +5,18 @@ import StackButton from '@/components/stacked-button';
 import StackContainer from '@/components/stacked-container';
 
 export default function Home() {
+	const openUrl = (url: string) => {
+		window.location.href = url;
+	};
+
+	const openConnectWithUs = () => {
+		openUrl('https://dungeon-console.web.app/connect');
+	};
+
+	const openAuthentication = () => {
+		openUrl('https://dungeon-console.web.app/');
+	}
+
 	return (
 		<div className="flex flex-col">
 			{/* Section One */}
@@ -18,7 +30,23 @@ export default function Home() {
 					/>
 				</div>
 				<div className="relative z-20 p-8 lg:px-24">
-					<img alt="icon" src="/assets/Icon.png" width="60" height="60" />
+					<div className="flex flex-row justify-between items-start">
+						<img alt="icon" src="/assets/Icon.png" width="60" height="60" />
+						<div className="flex space-x-4">
+							<div
+								className="text-xl text-white px-3 py-2 cursor-pointer"
+								onClick={openAuthentication}
+							>
+								Login
+							</div>
+							<div onClick={openAuthentication} className='cursor-pointer'>
+								<StackContainer width="w-24" height={'h-10'}>
+									<div className="text-mg text-white">Sign-up</div>
+								</StackContainer>
+							</div>
+						</div>
+					</div>
+
 					<div className="flex flex-col items-start justify-center h-[80vh]">
 						<div className="font-pixel text-4xl pb-4 sm:text-6xl">Dungeon</div>
 						<div className="pb-6 sm:text-xl sm:w-[60vw]">
@@ -30,6 +58,7 @@ export default function Home() {
 							bgColor="bg-purple-500"
 							textColor="text-white"
 							width="w-40 sm:w-48"
+							onClick={openAuthentication}
 						/>
 					</div>
 				</div>
@@ -76,6 +105,7 @@ export default function Home() {
 								bgColor="bg-green-400"
 								textColor="text-black"
 								width="w-40"
+								onClick={openAuthentication}
 							/>
 						</div>
 					</div>
@@ -115,6 +145,7 @@ export default function Home() {
 							bgColor="bg-orange-400"
 							textColor="text-black"
 							width="w-48"
+							onClick={openConnectWithUs}
 						/>
 					</div>
 				</div>
@@ -137,11 +168,13 @@ export default function Home() {
 								in the details and we will get in touch with you.
 							</div>
 							<div className="pt-4"></div>
+							{/* https://dungeon-console.web.app/connect */}
 							<StackButton
 								content="Connect with us"
 								bgColor="bg-red-400"
 								textColor="text-black"
 								width="w-48 sm:w-52"
+								onClick={openConnectWithUs}
 							/>
 						</div>
 					</div>
