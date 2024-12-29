@@ -95,7 +95,11 @@ export default function Home() {
 								<div className="ps-2">Colab and compete</div>
 							</div>
 							<div className="pt-4"></div>
-							<div className='flex flex-row'></div>
+							<div className='flex flex-wrap'>
+								<img src="/assets/googleplay.png" alt="google play" className='w-34 h-20 mb-4'/>
+								<div className='ml-4'></div>
+								<img src="/assets/appstore.png" alt="google play" className='w-34 h-20'/>
+							</div>
 						</div>
 					</div>
 				</StackContainer>
