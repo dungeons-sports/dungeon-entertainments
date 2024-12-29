@@ -7,6 +7,13 @@ import { useRouter } from 'next/navigation';
 
 export default function Home() {
 	const router = useRouter();
+	const openUrl = (url: string) => {
+		window.location.href = url;
+	};
+
+	const openRegister = () => {
+		openUrl('https://dungeon-console.web.app/register');
+	};
 
   const openConnectWithUs = () => {
     router.push("/partner"); // Navigate to the 'About' page
@@ -138,7 +145,7 @@ export default function Home() {
 							bgColor="bg-orange-400"
 							textColor="text-black"
 							width="w-48"
-							onClick={openConnectWithUs}
+							onClick={openRegister}
 						/>
 					</div>
 				</div>
