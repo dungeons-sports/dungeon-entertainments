@@ -3,19 +3,14 @@
 
 import StackButton from '@/components/stacked-button';
 import StackContainer from '@/components/stacked-container';
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
-	const openUrl = (url: string) => {
-		window.location.href = url;
-	};
+	const router = useRouter();
 
-	const openConnectWithUs = () => {
-		openUrl('https://dungeon-console.web.app/connect');
-	};
-
-	const openAuthentication = () => {
-		openUrl('https://dungeon-console.web.app/');
-	}
+  const openConnectWithUs = () => {
+    router.push("/partner"); // Navigate to the 'About' page
+  };
 
 	return (
 		<div className="flex flex-col">
@@ -33,7 +28,7 @@ export default function Home() {
 					<div className="flex flex-row justify-between items-start">
 						<img alt="icon" src="/assets/Icon.png" width="60" height="60" />
 						<div className="flex space-x-4">
-							<div
+							{/* <div
 								className="text-xl text-white px-3 py-2 cursor-pointer"
 								onClick={openAuthentication}
 							>
@@ -43,7 +38,7 @@ export default function Home() {
 								<StackContainer width="w-24" height={'h-10'}>
 									<div className="text-mg text-white">Sign-up</div>
 								</StackContainer>
-							</div>
+							</div> */}
 						</div>
 					</div>
 
@@ -58,7 +53,7 @@ export default function Home() {
 							bgColor="bg-purple-500"
 							textColor="text-white"
 							width="w-40 sm:w-48"
-							onClick={openAuthentication}
+							onClick={openConnectWithUs}
 						/>
 					</div>
 				</div>
@@ -100,13 +95,7 @@ export default function Home() {
 								<div className="ps-2">Colab and compete</div>
 							</div>
 							<div className="pt-4"></div>
-							<StackButton
-								content="Book Now"
-								bgColor="bg-green-400"
-								textColor="text-black"
-								width="w-40"
-								onClick={openAuthentication}
-							/>
+							<div className='flex flex-row'></div>
 						</div>
 					</div>
 				</StackContainer>
