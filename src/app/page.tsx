@@ -11,13 +11,21 @@ export default function Home() {
 		window.location.href = url;
 	};
 
-	const openRegister = () => {
-		openUrl('https://dungeon-console.web.app/register');
+	const openRegister = () => {	
+		openUrl('https://dungeon-console.web.app/signup?isPartner=true');
 	};
 
-  const openConnectWithUs = () => {
-    router.push("/partner"); // Navigate to the 'About' page
-  };
+	const openLogin = () => {
+		openUrl('https://dungeon-console.web.app/login');
+	}
+
+	const openSignup = () => {
+		openUrl('https://dungeon-console.web.app/signup');
+	}
+
+	const openConnectWithUs = () => {
+		router.push('/partner'); // Navigate to the 'About' page
+	};
 
 	return (
 		<div className="flex flex-col">
@@ -35,17 +43,17 @@ export default function Home() {
 					<div className="flex flex-row justify-between items-start">
 						<img alt="icon" src="/assets/Icon.png" width="60" height="60" />
 						<div className="flex space-x-4">
-							{/* <div
+							<div
 								className="text-xl text-white px-3 py-2 cursor-pointer"
-								onClick={openAuthentication}
+								onClick={openLogin}
 							>
 								Login
 							</div>
-							<div onClick={openAuthentication} className='cursor-pointer'>
+							<div onClick={openSignup} className='cursor-pointer'>
 								<StackContainer width="w-24" height={'h-10'}>
 									<div className="text-mg text-white">Sign-up</div>
 								</StackContainer>
-							</div> */}
+							</div>
 						</div>
 					</div>
 
@@ -102,10 +110,18 @@ export default function Home() {
 								<div className="ps-2">Colab and compete</div>
 							</div>
 							<div className="pt-4"></div>
-							<div className='flex flex-wrap'>
-								<img src="/assets/googleplay.png" alt="google play" className='w-34 h-20 mb-4'/>
-								<div className='ml-4'></div>
-								<img src="/assets/appstore.png" alt="google play" className='w-34 h-20'/>
+							<div className="flex flex-wrap">
+								<img
+									src="/assets/googleplay.png"
+									alt="google play"
+									className="w-34 h-20 mb-4"
+								/>
+								<div className="ml-4"></div>
+								<img
+									src="/assets/appstore.png"
+									alt="google play"
+									className="w-34 h-20"
+								/>
 							</div>
 						</div>
 					</div>

@@ -11,6 +11,11 @@ export default function Partner() {
 		window.location.href = url;
 	};
 
+	const openRegister = () => {	
+		openUrl('https://dungeon-console.web.app/signup?isPartner=true');
+	};
+
+
 	const openConnectWithUs = () => {
 		openUrl('https://dungeon-console.web.app/connect');
 	};
@@ -40,13 +45,13 @@ export default function Partner() {
 							<br />
 							digital presence.
 						</div>
-						{/* <StackButton
-							content="Get started"
+						<StackButton
+							content="Become a partner"
 							bgColor="bg-purple-500"
 							textColor="text-white"
 							width="w-40 sm:w-48"
-							onClick={() => {}}
-						/> */}
+							onClick={openRegister}
+						/>
 					</div>
 				</div>
 			</div>
