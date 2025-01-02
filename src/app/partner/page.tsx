@@ -11,13 +11,12 @@ export default function Partner() {
 		window.location.href = url;
 	};
 
-	const openRegister = () => {	
-		openUrl('https://dungeon-console.web.app/signup?isPartner=true');
+	const openRegister = () => {
+		openUrl('https://console.dungeonofgames.com/signup?isPartner=true');
 	};
 
-
 	const openConnectWithUs = () => {
-		openUrl('https://dungeon-console.web.app/connect');
+		openUrl('https://console.dungeonofgames.com/connect');
 	};
 
 	return (
@@ -49,7 +48,7 @@ export default function Partner() {
 							content="Become a partner"
 							bgColor="bg-purple-500"
 							textColor="text-white"
-							width="w-40 sm:w-48"
+							width="w-44 sm:w-56"
 							onClick={openRegister}
 						/>
 					</div>
@@ -58,7 +57,7 @@ export default function Partner() {
 			<div className="relative w-screen h-screen bg-black"></div>
 			<div className="absolute top-[95vh] left-[5vw] z-20">
 				<StackContainer width={'w-[90vw]'} height={'h-[90vh]'}>
-        <div className="relative flex flex-col sm:flex-row justify-center items-start sm:items-center w-[100vw] py-5">
+					<div className="relative flex flex-col sm:flex-row justify-center items-start sm:items-center w-[100vw] py-5">
 						<img
 							alt="icon"
 							src="/assets/panda.png"
@@ -66,9 +65,12 @@ export default function Partner() {
 						/>
 						<div className="sm:w-16"></div>
 						<div className="flex flex-col justify-center items-start sm:h-[60vh]">
-							<div className="font-pixel text-2xl sm:text-4xl pb-2">Chat with us</div>
+							<div className="font-pixel text-2xl sm:text-4xl pb-2">
+								Chat with us
+							</div>
 							<div className="pb-3 sm:text-2xl sm:w-[40vw]">
-              Interested? We&apos;d love to have a chat with you to understand your needs and align to it. 
+								Interested? We&apos;d love to have a chat with you to understand
+								your needs and align to it.
 							</div>
 							<div className="pt-4"></div>
 							{/* https://dungeon-console.web.app/connect */}
