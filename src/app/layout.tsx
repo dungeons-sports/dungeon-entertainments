@@ -28,6 +28,14 @@ export default function RootLayout({
 		router.push("/partner"); // Navigate to the 'About' page
 	}
 
+	const openTermsPage = () => {
+		router.push("/terms-and-conditions");
+	}
+
+	const openPrivacyPage = () => {
+		router.push("/privacy-policy");
+	}
+
 	return (
 		<html lang="en">
 			<body className={`${roboto.variable}, ${pixelifySans.variable}`}>
@@ -49,38 +57,38 @@ export default function RootLayout({
 							<div className="flex flex-col p-16">
 								<div className="font-roboto text-lg">Company</div>
                 <div className="mb-3"></div>
-                <div className="font-roboto text-lg text-zinc-600">About us</div>
+                <div className="font-roboto text-lg text-zinc-600 cursor-pointer">About us</div>
                 <div className="mb-3"></div>
-                <div className="font-roboto text-lg text-zinc-600">Electronic Sports</div>
+                <div className="font-roboto text-lg text-zinc-600 cursor-pointer">Electronic Sports</div>
                 <div className="mb-3"></div>
-                <div className="font-roboto text-lg text-zinc-600">Contact</div>
+                <div className="font-roboto text-lg text-zinc-600 cursor-pointer">Contact</div>
                 <div className="mb-3"></div>
-                <div className="font-roboto text-lg text-zinc-600">Career</div>
+                <div className="font-roboto text-lg text-zinc-600 cursor-pointer">Career</div>
                 <div className="mb-3"></div>
-                <div className="font-roboto text-lg text-zinc-600" onClick={openPartnerWithUs}>Partner with us</div>
+                <div className="font-roboto text-lg text-zinc-600 cursor-pointer" onClick={openPartnerWithUs}>Partner with us</div>
                 <div className="mb-3"></div>
 							</div>
 							<div className="flex flex-col p-16">
 								<div className="font-roboto text-lg">Social</div>
                 <div className="mb-3"></div>
-                <div className="font-roboto text-lg text-zinc-600">Join our Discord</div>
+                <div className="font-roboto text-lg text-zinc-600 cursor-pointer">Join our Discord</div>
                 <div className="mb-3"></div>
-                <div className="font-roboto text-lg text-zinc-600">Stream Sponcership</div>
+                <div className="font-roboto text-lg text-zinc-600 cursor-pointer">Stream Sponcership</div>
                 <div className="mb-3"></div>
-                <div className="font-roboto text-lg text-zinc-600">Instagram</div>
+                <div className="font-roboto text-lg text-zinc-600 cursor-pointer">Instagram</div>
                 <div className="mb-3"></div>
-                <div className="font-roboto text-lg text-zinc-600">Youtube</div>
+                <div className="font-roboto text-lg text-zinc-600 cursor-pointer">Youtube</div>
 							</div>
 							<div className="flex flex-col p-16">
 								<div className="font-roboto text-lg">Miscellanious</div>
                 <div className="mb-3"></div>
-                <div className="font-roboto text-lg text-zinc-600">FAQ</div>
+                <div className="font-roboto text-lg text-zinc-600 cursor-pointer">FAQ</div>
                 <div className="mb-3"></div>
-                <div className="font-roboto text-lg text-zinc-600">Terms and Conditions</div>
+                <div className="font-roboto text-lg text-zinc-600 cursor-pointer" onClick={openTermsPage}>Terms and Conditions</div>
                 <div className="mb-3"></div>
-                <div className="font-roboto text-lg text-zinc-600">Privacy Policy</div>
+                <div className="font-roboto text-lg text-zinc-600 cursor-pointer" onClick={openPrivacyPage}>Privacy Policy</div>
                 <div className="mb-3"></div>
-                <div className="font-roboto text-lg text-zinc-600">Cancellation Policy</div>
+                <div className="font-roboto text-lg text-zinc-600 cursor-pointer">Cancellation Policy</div>
 							</div>
 						</div>
 					</div>

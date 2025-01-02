@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-// 'use client';
+'use client';
 
 import StackButton from '@/components/stacked-button';
 import StackContainer from '@/components/stacked-container';
