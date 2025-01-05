@@ -11,7 +11,7 @@ const StackButton = ({
 	width: string;
 	onClick?: () => void;
 }) => (
-	<div className="relative" onClick={onClick}>
+	<div className="relative cursor-pointer" onClick={onClick}>
 		<div
 			className={`container ${width} h-12 sm:h-14 bg-zinc-800 border-white border-2`}
 		>

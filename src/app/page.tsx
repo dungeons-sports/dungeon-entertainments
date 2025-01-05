@@ -3,10 +3,10 @@
 
 import StackButton from '@/components/stacked-button';
 import StackContainer from '@/components/stacked-container';
-// import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
-	// const router = useRouter();
+	const router = useRouter();
 	const openUrl = (url: string) => {
 		window.location.href = url;
 	};
@@ -26,6 +26,10 @@ export default function Home() {
 	const openConnectWithUs = () => {
 		openUrl('https://console.dungeonofgames.com/connect');
 	};
+
+	const openPartnerWithUs = () =>{
+		router.push('/partner');
+	}
 
 	return (
 		<div className="relative flex flex-col">
@@ -161,13 +165,29 @@ export default function Home() {
 							<div className="ps-2">Transparent payments</div>
 						</div>
 						<div className="pt-4"></div>
+						<div className="flex flex-row">
 						<StackButton
-							content="Register Now!"
-							bgColor="bg-orange-400"
-							textColor="text-black"
-							width="w-48"
-							onClick={openRegister}
-						/>
+								content="Learn more"
+								bgColor="bg-black hover:bg-zinc-900"
+								textColor="text-white"
+								width="w-48"
+								onClick={openPartnerWithUs}
+							/>
+							{/* <button
+								onClick={openLogin}
+								className="px-4 py-2 border border-white text-white font-medium rounded hover:bg-white hover:text-black transition-all"
+							>
+								Learn more
+							</button> */}
+							<div className="w-10"></div>
+							<StackButton
+								content="Register Now!"
+								bgColor="bg-orange-400 hover:bg-orange-500"
+								textColor="text-black"
+								width="w-48"
+								onClick={openRegister}
+							/>
+						</div>
 					</div>
 				</div>
 			</div>
