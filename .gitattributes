@@ -4,3 +4,6 @@ firebase.json merge=ours
 
 # Keep branch-specific GitHub workflows and configurations
 .github/** merge=ours
+
+# Keep branch-specific Environment JSON
+public/env.json merge=ours

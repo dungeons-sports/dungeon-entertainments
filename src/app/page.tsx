@@ -11,11 +11,28 @@ export default function Home() {
 		window.location.href = url;
 	};
 
-	const openRegister = () => {
+	const getEnvironmentValue = async (): Promise<string> => {
+		const res = await fetch('/env.json');
+		const data = await res.json();
+		console.log(data);
+		return data['env'];
+	}
+
+	const openRegister = async () => {
+		const env: string = await getEnvironmentValue();
+		if(env === "dev"){
+			openUrl('https://dev-console-dungeon.firebaseapp.com/signup');
+			return;
+		}
 		openUrl('https://console.dungeonofgames.com/signup');
 	};
 
-	const openLogin = () => {
+	const openLogin = async () => {
+		const env: string = await getEnvironmentValue();
+		if(env === "dev"){
+			openUrl('https://dev-console-dungeon.firebaseapp.com/login');
+			return;
+		}
 		openUrl('https://console.dungeonofgames.com/login');
 	};
 
@@ -23,7 +40,12 @@ export default function Home() {
 	// 	openUrl('https://dungeon-console.web.app/signup');
 	// }
 
-	const openConnectWithUs = () => {
+	const openConnectWithUs = async () => {
+		const env: string = await getEnvironmentValue();
+		if(env === "dev") {
+			openUrl('https://dev-console-dungeon.firebaseapp.com/connect');
+			return;
+		}
 		openUrl('https://console.dungeonofgames.com/connect');
 	};
 
