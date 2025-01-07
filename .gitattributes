@@ -1,10 +1,10 @@
 # Keep branch-specific Firebase configuration files
-./.firebaserc merge=ours
-./firebase.json merge=ours
-./lib/firebase_options.dart merge=ours
+.firebaserc merge=ours
+firebase.json merge=ours
+lib/firebase_options.dart merge=ours
 
 # Keep branch-specific GitHub workflows and configurations
-./.github/** merge=ours
+.github/** merge=ours
 
 # Keep branch-specific Environment JSON
-./public/env.json merge=ours
+public/env.json merge=ours
