@@ -12,11 +12,28 @@ export default function Partner() {
 		window.location.href = url;
 	};
 
-	const openRegister = () => {
-		openUrl('https://console.dungeonofgames.com/signup?isPartner=true');
+	const getEnvironmentValue = async (): Promise<string> => {
+		const res = await fetch('/env.json');
+		const data = await res.json();
+		console.log(data);
+		return data['env'];
+	}
+
+
+	const openRegister = async () => {
+		const env: string = await getEnvironmentValue();
+		if(env === "dev"){
+			openUrl('https://dev-console-dungeon.web.app//signup');
+			return;
+		}
+		openUrl('https://console.dungeonofgames.com/signup');
 	};
 
-	const openConnectWithUs = () => {
+	const openConnectWithUs = async () => {
+		const env: string = await getEnvironmentValue();
+		if(env === "dev"){
+			openUrl('https://dev-console-dungeon.web.app//connect');
+		}
 		openUrl('https://console.dungeonofgames.com/connect');
 	};
 
