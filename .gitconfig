@@ -1,0 +1,3 @@
+[merge "ours"]
+  name = "Keep ours during merge"
+  driver = git checkout --ours %A
